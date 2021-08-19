@@ -17,7 +17,7 @@ const ProductScreen: React.FC = () => {
   /* Async function to load car informations */
   const loadCar = async (): Promise<void> => {
     const loadedCar = await getCar();
-    console.log('loadedCar', loadedCar);
+
     if (loadedCar?.data) {
       setCar(loadedCar.data);
     }
@@ -60,8 +60,6 @@ const ProductScreen: React.FC = () => {
     'kilometrage',
     'license_plate',
   ];
-
-  console.log('car', car);
 
   return (
     <View style={styles.container}>
